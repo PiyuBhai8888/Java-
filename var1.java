@@ -1,0 +1,33 @@
+class  var1
+{
+	public static void main(String[] args) 
+	{
+		String name;
+		short salary;
+		char grade;
+		long phno;
+		byte age;
+		float cgpa;
+		boolean isAlive;
+		String degree;
+		
+		name = "Piyush Girase";
+		salary = 5000;
+		grade = 'A';
+		phno = 6260612397l;
+		age = 23;
+		cgpa = 8.54f;
+		isAlive = true;
+		degree = "BE";
+		
+		System.out.println(name);
+		System.out.println(salary);
+		System.out.println(grade);
+		System.out.println(phno);
+		System.out.println(age);
+		System.out.println(cgpa);
+		System.out.println(isAlive);
+		System.out.println(degree);
+				
+	}
+}
