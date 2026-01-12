@@ -1,0 +1,20 @@
+class  char_widening 
+{
+	public static void main(String[] args) 
+	{
+		char c1 = 'R';
+		System.out.println(c1);
+		
+		int i1 = c1;
+		System.out.println(i1);
+		
+		long l1 = c1;
+		System.out.println(l1);
+		
+		float f1 = c1;
+		System.out.println(f1);
+		
+		double d1 = c1;
+		System.out.println(d1);
+	}
+}
