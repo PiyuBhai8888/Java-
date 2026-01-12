@@ -1,0 +1,27 @@
+class  double_narrowing
+{
+	public static void main(String[] args) 
+	{
+		double d1 = 2497.432;
+		System.out.println(d1);// 2497.432
+		
+	float f1 = (float)d1;
+   System.out.println(f1); //2497.432
+   
+   long l1= (long)d1;
+   System.out.println(l1);//2497
+	
+  int i1 = (int)d1;
+  System.out.println(i1);// 2497
+  
+  char c1= (char)d1;
+  System.out.println(c1); // ?
+  
+  short s1 = (short)d1;
+  System.out.println(s1); // 2497
+  
+  byte b1 = (byte)d1;
+  System.out.println(b1); // -63
+
+	}
+}
