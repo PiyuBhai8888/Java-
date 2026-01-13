@@ -3,7 +3,7 @@ class  int_narrowing
 	public static void main(String[] args) 
 	{
 			  
-   int i1= 7657;
+   int i1= 65534;
    System.out.println(i1);//765787258
   
   char c1= (char)i1;

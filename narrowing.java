@@ -1,4 +1,4 @@
-class  narrowing
+class narrowing
 {
 	public static void main(String[] args) 
 	{

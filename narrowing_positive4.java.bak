@@ -1,0 +1,27 @@
+class narrowing_positive4
+{
+	public static void main(String[] args) 
+	{
+		long b1 = 98845685634794297433673l;
+		System.out.println(b1); 
+		// error integer number too large
+		
+	   // long b1 = (long) 988456854352797936343673l;
+		System.out.println(b1); // error integer number too large
+		
+		long b2 = (long) 96976917324632273957291l;
+		System.out.println(b2); // error integer number too large
+		
+		long b3 = (long) 917957197342623592741261l; 
+		System.out.println(b3); // error integer number too large
+		
+		long b4 = (long) -988456853246325466343673l;
+		System.out.println(b4); // error integer number too large
+		
+		long b5 = (long) -96976913526235462773957291l;
+		System.out.println(b5);// error integer number too large
+		
+		long b6 = (long) -9179571975326432754592741261l;
+		System.out.println(b6); // error integer number too large 
+		
+} }

@@ -1,0 +1,27 @@
+class narrowing_positive3
+{
+	public static void main(String[] args) 
+	{
+		//int b1 = 2147483848;
+		//System.out.println(b1); 
+		// error integer number too large
+		
+	    int b1 = (int) 2147483848;
+		System.out.println(b1); //-32768
+		
+		//int b2 = (int) 4294967696;
+		//System.out.println(b2); //0
+		
+		// int b3 = (int) 92743979734943; 
+		// System.out.println(b3); // -32768
+		
+		// int b4 = (int) -2147483848;
+		// System.out.println(b4); //0
+		
+		// int b5 = (int) -4294967696;
+		// System.out.println(b5);// -13418
+		
+		// int b6 = (int) -92743979734943;
+		// System.out.println(b6); //-32768 
+		
+} }
