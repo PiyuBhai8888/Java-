@@ -3,6 +3,10 @@ class  int_narrowing
 	public static void main(String[] args) 
 	{
 			  
+   //int i1= 65534;
+   //System.out.println(i1); 
+   
+   
    int i1= 765787258;
    System.out.println(i1);//765787258
   
