@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+class readData_char 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the first char ");//926.3526
+		char n1 = sc.next().charAt(0);
+		
+		System.out.println("Enter the second char ");//246.24632
+		char n2 = sc.next().charAt(0);
+		
+		int ans = n1 + n2;
+		
+		System.out.println("The sum of " +n1+ " and " +n2+ " is: " +ans);//187.61364000000006
+	}
+}

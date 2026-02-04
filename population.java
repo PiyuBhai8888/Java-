@@ -1,0 +1,18 @@
+class  population
+{
+	public static void main(String[] args) 
+	{
+   long currPop = 312032486;
+   //              day   hr   min  sec   yrs
+   long seconds = (365 * 24 * 60 * 60) * 5;
+   
+   final long birth = seconds/7;
+   final long death = seconds/13;
+   final long immigrants = seconds /45;
+   
+   long newPop =  currPop + birth - death + immigrants;
+		System.out.println("previous pop : " + currPop);
+   	System.out.println("new pop : " + newPop);
+   
+	}
+}

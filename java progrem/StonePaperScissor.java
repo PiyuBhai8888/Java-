@@ -1,0 +1,58 @@
+import java.util.Scanner;
+class  StonePaperScissor
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc= new Scanner(System.in);
+		infiniteLoop :
+			for (; ; )
+			{
+			System.out.println("\n *****WELCOME***** \n");
+			System.out.println(" 1.Stone \n 2.Paper \n 3.Scissor\n");
+			System.out.print("Enter the Response : \n");
+			
+			int dgtUser = sc.nextInt();
+			String user = "";
+			
+			if (dgtUser==1) user="Stone";
+			else if (dgtUser==2) user="Paper";
+			else if (dgtUser==3) user="Scissor";
+			else {
+				System.out.println("\n INVALIED RESPONSE \n");
+				continue infiniteLoop;
+			}
+			//bot implementation
+			int dgtBot = 0;
+			for (; ; )
+			{
+				dgtBot = ( int)(Math.random()*10);
+				if(dgtBot>=1 && dgtBot <=3)
+					break;
+			}
+			
+			String bot = "";
+			if (dgtBot==1) bot="Stone";
+			else if (dgtBot==2) bot="Paper";
+			else  bot="Scissor";
+
+				System.out.printf("%n %10s %8s",bot,user);
+				
+				//calculate Winner
+				if(bot.equals("Stone") && user.equals("Paper") ||
+					(bot.equals("Paper") && user.equals("Scissor")) ||
+					(bot.equals("Scissor") && user.equals("Stone")))
+				{
+					System.out.println("\n ***** User Won ***** \n");
+				}
+				else if (bot.equals("Stone") && user.equals("Scissor") ||
+					(bot.equals("Paper") && user.equals("Stone")) ||
+					(bot.equals("Scissor") && user.equals("Paper")))
+				{
+					System.out.println("\n ***** Bot Won ***** \n");
+				}
+				else {
+					System.out.println("\n It's A Draw \n");
+				}		
+			}
+	}
+}

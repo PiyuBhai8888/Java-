@@ -1,0 +1,13 @@
+class largest_4number 
+{
+	public static void main(String[] args) 
+	{
+		int n1=367,n2=232,n3=32,n4=429;
+		int large;
+		
+		larger = n1> (large = n2 > n3 ? n2 : n3) ? n1 :large;
+		
+		int largest = larger > n4 ? large : n4;
+		System.out.println(largest);
+	}
+}

@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+class readData_string 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter Name");
+		String name = sc.nextLine();
+					
+		System.out.println("Enter Number");
+		String number = sc.nextLine();
+		
+		System.out.println("Enter City");
+		String city = sc.nextLine();
+		
+		System.out.println("Enter Class");
+		String classes = sc.nextLine();
+		
+		System.out.println("Enter Gender");
+		String gender = sc.nextLine();
+		
+		
+		System.out.println(name);
+		System.out.println(number);
+		System.out.println(city);
+		System.out.println(classes);
+		System.out.println(gender);
+	}
+}

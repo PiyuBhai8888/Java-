@@ -1,0 +1,9 @@
+class condition1
+{
+	public static void main(String[] args) 
+	{
+		int num = 0;
+		String ans = num >=0 ? "It's Postive" : "It's negitve";
+		System.out.println(ans);
+	}
+}
