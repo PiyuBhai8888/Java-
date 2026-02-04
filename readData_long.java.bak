@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+class readData_long
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the first number");
+		long n1 = sc.nextLong();
+		
+		System.out.println("Enter the second number");
+		long n2 = sc.nextLong();
+		
+		long ans = n1 * n2;
+		
+		System.out.println("The sum of " +n1+ " and " +n2+ " is: " +ans);
+	}
+}

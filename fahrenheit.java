@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+class fahrenheit 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter a dgree in celsius: ");
+		int celsius = sc.nextInt();
+		
+		final double fahrenheit = (9.0/5) * celsius + 32;
+		
+		System.out.printf (celsius+ " celsius is " +fahrenheit+ " fahrenheit");
+	
+	}
+}

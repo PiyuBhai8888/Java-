@@ -1,0 +1,22 @@
+import java.util.Scanner;
+class rectangle 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the width");
+		double width = sc.nextDouble();
+		
+		System.out.println("Enter the hight");
+		double hight = sc.nextDouble();
+		
+		final double AREA = width * hight;
+		final double Perimeter = 2*(width * hight);
+		
+		
+		
+		System.out.printf("Area of rectangle %.3f %n", AREA);
+		System.out.printf("Perimeter of rectangle %.3f",Perimeter);
+	}
+}

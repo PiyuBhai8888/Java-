@@ -1,0 +1,24 @@
+//import java.util.Scanner;
+
+class average 
+{
+	public static void main(String[] args) 
+	{
+		//Scanner sc = new Scanner (System.in);
+		double kilometer = 14.0;
+		int min = 45;
+		int sec = 30;
+		
+		final double perMile = 1.6;
+		final double secPerHour = 3600.0;
+		
+		int totalSec = (min * 60) + sec;
+		double totalHours = totalSec / secPerHour;
+		double totalMile = kilometer / perMile;
+		
+		double time = ((45/60) + (30/3600));
+		
+		double averageSpeed = totalMile / totalHours;
+		System.out.println("average speed is %f ",averageSpeed);
+	}
+}
