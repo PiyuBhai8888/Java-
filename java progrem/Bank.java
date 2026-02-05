@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.time.LocalDateTime;
 class Bank
 {
 	static String name;
@@ -8,6 +10,8 @@ class Bank
 	static String pancard;
 	static double balance;
 	static int pin;
+	static LocalDateTime a ; // null
+	static ArrayList<String> transaction = new ArrayList<String>();
 	
 	public static void main(String[] args) 
 	{
@@ -41,6 +45,10 @@ class Bank
 				adhar = new Scanner(System.in).nextLong();
 				System.out.print("Enetr an amount : ");
 				balance = new Scanner(System.in).nextDouble();
+				
+				a = LocalDateTime.now();
+				transaction.add("Deposit (Creation) : "+balance+"RS  "+(a.getHour())%12+ ":" +a.getMinute()+ ":" +a.getSecond()  );
+				
 				System.out.print("Pin : ");
 				pin = new Scanner(System.in).nextInt();
 				System.out.println("*** ACCOUNT CREATED SCUCCESFULLY *** \n");
@@ -64,7 +72,7 @@ class Bank
 					features :
 						for (; ; ){
 						System.out.println("\n ***** FEATURES *****\n");
-					   System.out.println(" 1.DEPOSIT \n 2.WITHDRAW \n 3.CHECK BALANCE \n 4.LOGOUT ");
+					   System.out.println(" 1.DEPOSIT \n 2.WITHDRAW \n 3.CHECK BALANCE \n 4.TRANSACTIONS \n 5.LOGOUT ");
 					   System.out.print("\nEnter your Option : ");
 					   int opt = sc.nextInt();
 					  
@@ -76,6 +84,10 @@ class Bank
 						  System.out.print("Enter Deposit Amount : ");
 						  double deptAmt = new Scanner(System.in).nextDouble();
 						  balance += deptAmt;
+						  
+						  a= LocalDateTime.now();
+				transaction.add("Deposit : "+deptAmt+"RS  "+(a.getHour())%12+ ":" +a.getMinute()+ ":" +a.getSecond()  );
+						  
 						  System.out.println("\n AMOUNT DEPOSITED SCUCCESFULLY\n");
 						  break;
 						  }
@@ -91,6 +103,10 @@ class Bank
 								  if (wdrwAmt <= balance)
 								  {
 									  balance -= wdrwAmt;
+									  
+									  a= LocalDateTime.now();
+				transaction.add("Withdraw : "+wdrwAmt+"RS  "+(a.getHour())%12+ ":" +a.getMinute()+ ":" +a.getSecond()  );
+						  									  
 									  System.out.println("\n AMOUNT DEBITED SCUCCESFULLY\n");
 								  }
 								  else 
@@ -119,7 +135,18 @@ class Bank
 							  }
 							  break;								
 						  }
-						  case 4:
+						  case 4 :
+						  {
+							System.out.println("\n ***** TRANSACTIONS ***** \n");
+							for (String element : transaction )
+							{
+								System.out.println(element);
+							}
+							System.out.println();
+							break;
+						  }
+						  
+						  case 5:
 							  {
 							System.out.println("\n Thank You & Visit Again \n");
 							continue welcomeLoop;
